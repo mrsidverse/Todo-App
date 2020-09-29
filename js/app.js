@@ -1,4 +1,6 @@
+
 // If used add a note, store it on local storage
+
 showNotes();
 let addBtn = document.getElementById("addBtn");
 addBtn.addEventListener("click", function (e) {
@@ -16,7 +18,6 @@ addBtn.addEventListener("click", function (e) {
 
   localStorage.setItem("notes", JSON.stringify(notesObj));
   addTxt.value = "";
-  //console.log(notesObj);
   showNotes();
 });
 
@@ -48,6 +49,7 @@ function showNotes() {
   }
 }
 
+
 // Function to delete a note
 function deleteNote(index) {
   console.log("I am deleting", index);
@@ -64,6 +66,7 @@ function deleteNote(index) {
 }
 
 
+//Function do Search Notes
 let search = document.getElementById('searchTxt');
 search.addEventListener("input", function(){
 
@@ -80,7 +83,11 @@ search.addEventListener("input", function(){
     })
 })
 
+
+
 /* 
+Upcoming Features
+
 1. Add title
 2. Mark
 3. Separate notes by user
